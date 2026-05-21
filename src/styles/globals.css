@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #3b82f6;
+  --secondary: #8b5cf6;
+  --muted: #6b7280;
+  --accent: #f59e0b;
+  --border: #e5e7eb;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --destructive: #ef4444;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-white text-gray-900;
+}
+
+a {
+  @apply text-primary hover:underline;
+}
