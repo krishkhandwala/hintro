@@ -57,7 +57,7 @@ export const Sidebar = ({ profile, isLoading, onFeedbackClick }: SidebarProps) =
             </div>
           ) : profile ? (
             <div className="flex items-center gap-3">
-              <div className="h-10 w-10 rounded-full bg-blue-600 flex items-center justify-center">
+              <div className="h-10 w-10 rounded-full bg-gray-600 flex items-center justify-center">
                 <span className="text-white font-semibold text-sm">{getInitials(profile.name)}</span>
               </div>
               <div className="flex-1">

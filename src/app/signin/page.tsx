@@ -15,8 +15,8 @@ export default function SignInPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-        <h2 className="text-xl font-semibold mb-4">Sign in to Hintro (Demo)</h2>
-        <p className="text-sm text-gray-600 mb-6">Choose a demo user to sign in as:</p>
+        <h2 className="text-2xl font-bold mb-2">Sign in</h2>
+        <p className="text-sm text-gray-600 mb-6">Choose a demo user:</p>
         <div className="space-y-3">
           <button
             onClick={() => signIn('u1')}

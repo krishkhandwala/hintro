@@ -19,8 +19,8 @@ export const TopNavbar = () => (
         </button>
 
         <Link href="/signin" className="ml-3">
-          <button title="Sign in" className="h-10 w-10 rounded-full bg-slate-200 flex items-center justify-center">
-            <span className="text-sm">🙂</span>
+          <button title="Sign in" className="h-10 w-10 rounded-full bg-gray-300 flex items-center justify-center font-semibold text-gray-700">
+            U
           </button>
         </Link>
       </div>
