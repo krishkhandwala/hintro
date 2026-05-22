@@ -6,13 +6,14 @@ import { STORAGE_KEYS } from '@/constants';
  */
 export const saveFeedback = (feedback: string): void => {
   try {
+    if (typeof window === 'undefined') return;
     const data: FeedbackData = {
       feedback,
       timestamp: new Date().toISOString(),
     };
     localStorage.setItem(STORAGE_KEYS.FEEDBACK, JSON.stringify(data));
-  } catch (error) {
-    console.error('Failed to save feedback:', error);
+  } catch {
+    return;
   }
 };
 
@@ -21,10 +22,10 @@ export const saveFeedback = (feedback: string): void => {
  */
 export const getFeedback = (): FeedbackData | null => {
   try {
+    if (typeof window === 'undefined') return null;
     const data = localStorage.getItem(STORAGE_KEYS.FEEDBACK);
     return data ? JSON.parse(data) : null;
-  } catch (error) {
-    console.error('Failed to get feedback:', error);
+  } catch {
     return null;
   }
 };
@@ -34,9 +35,10 @@ export const getFeedback = (): FeedbackData | null => {
  */
 export const clearFeedback = (): void => {
   try {
+    if (typeof window === 'undefined') return;
     localStorage.removeItem(STORAGE_KEYS.FEEDBACK);
-  } catch (error) {
-    console.error('Failed to clear feedback:', error);
+  } catch {
+    return;
   }
 };
 
@@ -45,6 +47,7 @@ export const clearFeedback = (): void => {
  */
 export const hasFeedback = (): boolean => {
   try {
+    if (typeof window === 'undefined') return false;
     return !!localStorage.getItem(STORAGE_KEYS.FEEDBACK);
   } catch {
     return false;

@@ -68,7 +68,8 @@ export const formatRelativeTime = (dateString: string): string => {
 /**
  * Generate initials from name
  */
-export const getInitials = (name: string): string => {
+export const getInitials = (name: string | undefined | null): string => {
+  if (!name) return 'U';
   return name
     .split(' ')
     .map((n) => n[0])

@@ -1,50 +1,84 @@
-# Hintro Frontend Dashboard
+# Hintro Dashboard
 
-A production-grade SaaS dashboard built with modern frontend technologies. This project demonstrates clean architecture, pixel-perfect UI, and professional engineering practices.
+A production-grade SaaS dashboard built with modern frontend technologies. This project demonstrates clean architecture, pixel-perfect UI design, and professional engineering practices.
 
-## 🎯 Features
+![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)
+![Next.js](https://img.shields.io/badge/Next.js-16.2.6-black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4-06B6D4)
 
-- **Responsive Design** - Works perfectly on mobile, tablet, laptop, and desktop
-- **Real API Integration** - Uses actual backend APIs (not hardcoded data)
-- **Empty & Populated States** - Handles both new users and active users elegantly
-- **Loading States** - Skeleton loaders for smooth UX
-- **Error Handling** - Graceful error states with retry functionality
-- **localStorage Persistence** - Sidebar feedback flow with persistent storage
-- **Professional UI** - Tailwind CSS with shadcn/ui components
-- **Type-Safe** - Full TypeScript implementation
-- **Scalable Architecture** - Modular folder structure for easy expansion
+## 📸 Features
+
+- **✨ Responsive Design** - Perfectly optimized for mobile, tablet, laptop, and desktop
+- **🔄 Real API Integration** - Uses mock backend APIs with proper state management (no hardcoded data)
+- **👥 Multiple User States** - Seamlessly switch between empty state (u1) and active user (u2)
+- **⚡ Smooth Loading States** - Skeleton loaders and transitions for professional UX
+- **❌ Error Handling** - Graceful error states with retry functionality
+- **💾 Data Persistence** - localStorage integration for feedback and preferences
+- **🎨 Professional UI** - Clean design with Tailwind CSS and shadcn/ui components
+- **📝 Type-Safe Code** - Full TypeScript for maximum reliability
+- **🏗️ Scalable Architecture** - Modular folder structure for easy expansion
 
 ## 🛠 Tech Stack
 
-- **Framework**: Next.js 14+ (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **UI Components**: shadcn/ui, Lucide React
-- **State Management**: TanStack Query (React Query)
-- **HTTP Client**: Axios
-- **Animations**: Framer Motion
-- **Component Library**: Radix UI
+| Category | Technology |
+|----------|------------|
+| **Framework** | Next.js 16.2.6 (App Router) |
+| **Language** | TypeScript 5 |
+| **Styling** | Tailwind CSS 4 |
+| **UI Components** | shadcn/ui, Radix UI, Lucide React |
+| **State Management** | TanStack Query v5 (React Query) |
+| **HTTP Client** | Axios |
+| **Animations** | Framer Motion |
+| **Backend API** | Express.js + CORS |
+| **Database** | In-memory mock data |
 
 ## 📁 Project Structure
 
 ```
-src/
-├── app/              # Next.js App Router pages & layouts
-├── components/       # React components
-│   ├── dashboard/   # Main dashboard component
-│   ├── cards/       # Card components (StatCard, UsageCard, etc.)
-│   ├── tables/      # Table components (SessionsTable)
-│   ├── layout/      # Layout components (Sidebar, TopNavbar)
-│   ├── modals/      # Modal components (FeedbackModal)
-│   ├── empty-states/# Empty & error states
-│   └── ui/          # Base UI components (Button, Card, Dialog, etc.)
-├── hooks/           # Custom React hooks
-├── services/        # API client and services
-├── utils/           # Utility functions (formatting, storage)
-├── lib/             # Library configurations (QueryClient)
-├── types/           # TypeScript type definitions
-├── constants/       # Constants and configuration
-└── styles/          # Global styles
+hintro/
+├── src/
+│   ├── app/                    # Next.js App Router
+│   │   ├── layout.tsx         # Root layout with providers
+│   │   ├── page.tsx           # Home page
+│   │   └── providers.tsx      # React Query & User provider
+│   ├── components/            # Reusable React components
+│   │   ├── cards/             # StatCard, UsageCard, SubscriptionCard
+│   │   ├── charts/            # Chart components
+│   │   ├── dashboard/         # Main DashboardContent component
+│   │   ├── empty-states/      # Empty, Error, LoadingState components
+│   │   ├── layout/            # Sidebar, TopNavbar, UserSwitcher
+│   │   ├── modals/            # FeedbackModal
+│   │   ├── tables/            # SessionsTable
+│   │   └── ui/                # Base UI: Button, Card, Dialog, Skeleton
+│   ├── contexts/              # React contexts (UserContext)
+│   ├── hooks/                 # Custom React hooks
+│   │   ├── useProfile.ts      # Fetch user profile
+│   │   ├── useDashboard.ts    # Fetch dashboard data
+│   │   ├── useCallSessions.ts # Fetch call stats and sessions
+│   │   └── index.ts           # Exports
+│   ├── services/              # API client
+│   │   └── api.ts             # Axios API client with interceptors
+│   ├── types/                 # TypeScript types
+│   │   └── index.ts           # Type definitions
+│   ├── constants/             # Configuration constants
+│   │   └── index.ts           # API endpoints, theme colors, etc.
+│   ├── utils/                 # Utility functions
+│   │   ├── formatting.ts      # Date, duration formatting
+│   │   └── storage.ts         # localStorage helpers
+│   └── styles/                # Global styles
+│       └── globals.css        # Tailwind directives
+├── mock-backend/              # Express backend server
+│   ├── server.js              # Mock API endpoints
+│   └── package.json           # Backend dependencies
+├── public/                    # Static assets
+├── .env.local                 # Environment variables
+├── .env.example               # Environment template
+├── next.config.ts             # Next.js config
+├── tsconfig.json              # TypeScript config
+├── tailwind.config.ts         # Tailwind configuration
+├── postcss.config.mjs         # PostCSS config
+└── package.json               # Project dependencies
 ```
 
 ## 🚀 Getting Started

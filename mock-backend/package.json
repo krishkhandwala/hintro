@@ -1,0 +1,13 @@
+{
+  "name": "mock-backend-hintro",
+  "version": "1.0.0",
+  "description": "Local mock backend for Hintro",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}

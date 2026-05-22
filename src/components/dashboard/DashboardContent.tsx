@@ -119,7 +119,7 @@ export const DashboardContent = () => {
                   dashboardQuery.data?.subscriptionPlan || {
                     name: 'Free',
                     status: 'active',
-                    expiresAt: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(),
+                    expiresAt: new Date('2099-12-31').toISOString(),
                   }
                 }
                 isLoading={dashboardQuery.isLoading}
@@ -145,20 +145,27 @@ export const DashboardContent = () => {
               />
               <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Stats</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-600">Vocab Terms</span>
-                    <span className="font-semibold text-gray-900">
-                      {dashboardQuery.data?.vocabTerms.total ?? 0}
-                    </span>
+                {dashboardQuery.isLoading ? (
+                  <div className="space-y-3">
+                    <div className="h-4 bg-gray-200 rounded animate-pulse" />
+                    <div className="h-4 bg-gray-200 rounded animate-pulse" />
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-600">Notes</span>
-                    <span className="font-semibold text-gray-900">
-                      {dashboardQuery.data?.notes.total ?? 0}
-                    </span>
+                ) : (
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-600">Vocab Terms</span>
+                      <span className="font-semibold text-gray-900">
+                        {dashboardQuery.data?.vocabTerms?.total ?? 0}
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-600">Notes</span>
+                      <span className="font-semibold text-gray-900">
+                        {dashboardQuery.data?.notes?.total ?? 0}
+                      </span>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
 
