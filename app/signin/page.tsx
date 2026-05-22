@@ -21,14 +21,14 @@ export default function SignInPage() {
           <button
             onClick={() => signIn('u1')}
             disabled={isLoading}
-            className="w-full px-4 py-2 rounded-md border text-sm"
+            className="w-full px-4 py-2 rounded-md border text-sm hover:bg-gray-50 disabled:opacity-50"
           >
             Sign in as John Doe (Empty)
           </button>
           <button
             onClick={() => signIn('u2')}
             disabled={isLoading}
-            className="w-full px-4 py-2 rounded-md bg-black text-white text-sm"
+            className="w-full px-4 py-2 rounded-md bg-black text-white text-sm hover:opacity-90 disabled:opacity-50"
           >
             Sign in as Sarah Smith (Pro)
           </button>
