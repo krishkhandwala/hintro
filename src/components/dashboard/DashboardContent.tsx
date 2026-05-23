@@ -63,7 +63,7 @@ export const DashboardContent = () => {
       />
       <TopNavbar />
 
-      <main className="lg:ml-64 p-4 sm:p-6 pb-12">
+      <main className="lg:ml-64 p-4 sm:p-8 pb-12 bg-gray-50 min-h-screen">
         {isLoading ? (
           <LoadingState message="Loading your dashboard..." />
         ) : isEmpty ? (
@@ -71,7 +71,7 @@ export const DashboardContent = () => {
             <EmptyState
               icon={<BookOpen className="h-12 w-12 text-gray-400" />}
               title="No Sessions Yet"
-              description="Start a call session to see your activity here"
+              description="Start your first call session to see your activity here"
               action={{
                 label: 'Start a Call',
                 onClick: () => console.log('Start call'),

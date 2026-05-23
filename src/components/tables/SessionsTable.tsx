@@ -41,44 +41,44 @@ export const SessionsTable = ({ sessions, isLoading }: SessionsTableProps) => {
             <table className="w-full text-sm">
               <thead className="border-b border-gray-200 bg-gray-50">
                 <tr>
-                  <th className="text-left py-3 px-4 font-semibold text-gray-700">Date</th>
-                  <th className="text-left py-3 px-4 font-semibold text-gray-700">Duration</th>
-                  <th className="text-left py-3 px-4 font-semibold text-gray-700">
+                  <th className="text-left py-4 px-4 font-semibold text-gray-700">Date</th>
+                  <th className="text-left py-4 px-4 font-semibold text-gray-700">Duration</th>
+                  <th className="text-left py-4 px-4 font-semibold text-gray-700">
                     Participants
                   </th>
-                  <th className="text-left py-3 px-4 font-semibold text-gray-700">
+                  <th className="text-left py-4 px-4 font-semibold text-gray-700">
                     AI Interactions
                   </th>
                 </tr>
               </thead>
               <tbody>
-                {sessions.map((session) => (
-                  <tr key={session.id} className="border-b border-gray-100 hover:bg-gray-50">
-                    <td className="py-3 px-4">
+                {sessions.map((session, index) => (
+                  <tr key={session.id} className={`border-b border-gray-100 ${index % 2 === 0 ? 'hover:bg-gray-50' : 'bg-white hover:bg-gray-50'} transition-colors`}>
+                    <td className="py-4 px-4">
                       <div className="text-gray-900 font-medium">{formatDateTime(session.date)}</div>
                       <div className="text-xs text-gray-600">{formatRelativeTime(session.date)}</div>
                     </td>
-                    <td className="py-3 px-4 text-gray-900">
+                    <td className="py-4 px-4 text-gray-900 font-medium">
                       {formatDuration(session.duration)}
                     </td>
-                    <td className="py-3 px-4">
-                      <div className="flex flex-wrap gap-1">
+                    <td className="py-4 px-4">
+                      <div className="flex flex-wrap gap-2">
                         {session.participants.slice(0, 2).map((p) => (
                           <span
                             key={p}
-                            className="inline-flex items-center gap-1 px-2 py-1 bg-blue-50 text-blue-700 rounded text-xs font-medium"
+                            className="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium"
                           >
                             {p}
                           </span>
                         ))}
                         {session.participants.length > 2 && (
-                          <span className="text-xs text-gray-600">
+                          <span className="text-xs text-gray-600 py-1">
                             +{session.participants.length - 2} more
                           </span>
                         )}
                       </div>
                     </td>
-                    <td className="py-3 px-4 text-gray-900">{session.aiInteractions}</td>
+                    <td className="py-4 px-4 text-gray-900 font-medium">{session.aiInteractions}</td>
                   </tr>
                 ))}
               </tbody>

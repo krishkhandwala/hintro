@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  /* Colors */
   --primary: #3b82f6;
   --secondary: #8b5cf6;
   --muted: #6b7280;
@@ -11,6 +12,19 @@
   --success: #10b981;
   --warning: #f59e0b;
   --destructive: #ef4444;
+  
+  /* Sidebar Theme */
+  --sidebar-bg: #0f172a;
+  --sidebar-text: #f1f5f9;
+  --sidebar-border: #1e293b;
+  
+  /* Card Theme */
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  
+  /* Text Colors */
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
 }
 
 * {

@@ -35,7 +35,7 @@ export const Sidebar = ({ profile, isLoading, onFeedbackClick }: SidebarProps) =
 
       {/* Sidebar */}
       <aside
-        className={`fixed left-0 top-0 h-screen w-64 bg-slate-900 text-white flex flex-col transition-transform duration-300 z-40 lg:z-auto lg:translate-x-0 ${
+        className={`fixed left-0 top-0 h-screen w-64 bg-slate-900 text-white flex flex-col transition-transform duration-300 z-40 lg:z-auto lg:translate-x-0 border-r border-slate-800 ${
           isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
         }`}
       >
