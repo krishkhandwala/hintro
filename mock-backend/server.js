@@ -206,6 +206,7 @@ app.get('/api/call-sessions', (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`Mock backend server running on http://localhost:${PORT}`);
+// Listen on all interfaces so mobile devices on the same LAN can reach the server
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Mock backend server running on http://localhost:${PORT} (listening on 0.0.0.0)`);
 });
