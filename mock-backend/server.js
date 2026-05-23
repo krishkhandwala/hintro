@@ -7,6 +7,11 @@ const PORT = 4000;
 app.use(cors());
 app.use(express.json());
 
+app.use((req, res, next) => {
+  console.log(`[${new Date().toISOString()}] ${req.method} ${req.url} - x-user-id: ${req.headers['x-user-id'] || 'none'}`);
+  next();
+});
+
 const userData = {
   u1: {
     profile: {
