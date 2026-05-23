@@ -11,9 +11,9 @@ const userData = {
   u1: {
     profile: {
       id: "u1",
-      email: "john@example.com",
-      firstName: "John",
-      lastName: "Doe",
+      email: "soumya@example.com",
+      firstName: "Soumya Shekhar",
+      lastName: "Jain",
       login_method: "google",
       status: "active",
       is_hintro_admin: false,
@@ -23,9 +23,9 @@ const userData = {
     dashboard: {
       user: {
         id: "u1",
-        email: "john@example.com",
-        firstName: "John",
-        lastName: "Doe"
+        email: "soumya@example.com",
+        firstName: "Soumya Shekhar",
+        lastName: "Jain"
       },
       subscription: null,
       usage: {
@@ -55,9 +55,9 @@ const userData = {
   u2: {
     profile: {
       id: "u2",
-      email: "sarah@example.com",
-      firstName: "Sarah",
-      lastName: "Smith",
+      email: "krish@example.com",
+      firstName: "Krish",
+      lastName: "Khandwala",
       login_method: "google",
       status: "active",
       is_hintro_admin: false,
@@ -67,9 +67,9 @@ const userData = {
     dashboard: {
       user: {
         id: "u2",
-        email: "sarah@example.com",
-        firstName: "Sarah",
-        lastName: "Smith"
+        email: "krish@example.com",
+        firstName: "Krish",
+        lastName: "Khandwala"
       },
       subscription: {
         plan: "pro",
@@ -102,7 +102,7 @@ const userData = {
           language: ["English"],
           ai_interactions: 12,
           participants: [
-            { name: "Sarah Smith", isUser: true },
+            { name: "Krish Khandwala", isUser: true },
             { name: "Alex Johnson", isUser: false }
           ],
           createdAt: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000 - 3600 * 1000).toISOString(),
@@ -120,7 +120,7 @@ const userData = {
           language: ["English"],
           ai_interactions: 8,
           participants: [
-            { name: "Sarah Smith", isUser: true }
+            { name: "Krish Khandwala", isUser: true }
           ],
           createdAt: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000 - 1800 * 1000).toISOString(),
           updatedAt: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString()
@@ -137,7 +137,7 @@ const userData = {
           language: ["English"],
           ai_interactions: 24,
           participants: [
-            { name: "Sarah Smith", isUser: true },
+            { name: "Krish Khandwala", isUser: true },
             { name: "Mike Chen", isUser: false },
             { name: "Emily Davis", isUser: false }
           ],
